@@ -36,6 +36,22 @@ def createMirrorResponse(input):
             return random.choice(mirror['responses']).format(match.group(mirror['group']))
     return createContinueResponse()
 
+# Respond to the given getRatingResponse
+def getRatingResponse(input):
+    match = re.search("\d(\.\d)?", input).group()
+    if match:
+        score = float(match)
+        if score < 2:
+            rating = "low"
+        elif score < 4:
+            rating = "medium"
+        elif score < 5:
+            rating = "high"
+        elif score == 5:
+            rating = "perfect"
+        return random.choice(data['rating-' + rating])
+    return "Right..."
+
 # Get a random closers
 def getCloser():
     return random.choice(data['closers'])
@@ -51,12 +67,14 @@ say("Hello there! I'm RetroMaster 3000 (tm)")
 say("It's retro time, so let's get cracking!")
 say("========================================================================")
 
-ask(getStarterQuestion())
+answer = ask(getStarterQuestion())
+answer = ask(createMirrorResponse(answer))
 for question in getFollowUpQuestions():
     answer = ask(question)
     for x in range(1, random.randint(2,3)):
         answer = ask(createMirrorResponse(answer))
 
 
-ask("On a scale of 1 through 5, how would you rate this sprint?")
+answer = ask("To close things off... On a scale of 1 through 5, how would you rate this sprint?")
+say(getRatingResponse(answer))
 say(getCloser())

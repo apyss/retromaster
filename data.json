@@ -36,7 +36,7 @@
       "group" : 1,
       "responses" : [
         "Can you tell a bit more about {}?",
-        "How would you deal with {} better the next time?",
+        "How can you improve '{}' even more the next time?",
         "Ok, so '{}' is memorable. Care to explain?",
         "Why do you think {} was important?"
       ]
@@ -80,11 +80,11 @@
     },
     {
       "example" : "It has been a bit all over the place this time...",
-      "pattern" : "^.*? (it's|is|was|has been) ([^.,!]*)",
-      "group" : 2,
+      "pattern" : "^.*?(it ('s|is|was|has been) ([^.,!]*))",
+      "group" : 1,
       "responses" : [
         "How come you say it '{}'?",
-        "So, it '{}'. What more can say about it?",
+        "So, '{}'. What more can say about it?",
         "Is it always '{}'?"
       ]
     },
@@ -96,10 +96,19 @@
         "Tell us more about {}?",
         "What would you says was the real challenge with {}?"
       ]
+    },
+    {
+      "example" : "Well, what do you think?",
+      "pattern" : "^.*?you.*[?]$",
+      "group" : 0,
+      "responses" : [
+        "Let's not talk about me shall we? Let's continue with your story...",
+        "Don't ask me, I know nothing! Continue please, you were on a roll..."
+      ]
     }
   ],
   "continues" : [
-    "mmhmm...",
+    "mmhmm...", "mmhmm...", "mmhmm",
     "right...",
     "ok...",
     "check...",
@@ -109,7 +118,7 @@
     "well...",
     "go on...",
     "continue...",
-    "don't stop there...",
+    "don't stop...",
     "anything else...",
     "is that all...",
     "but...",
@@ -117,20 +126,27 @@
     "maybe...",
     "sure...",
     "possibly...",
-    "hmm...",
+    "hmm...", "hmm...", "hmm...",
     "pffft...",
     "wow...",
-    "for real..."
+    "ah...",
+    "so...",
+    "mmk...", "mmk...", "mmk...",
+    "yes, and...",
+    "please continue...",
+    "come to think about it...",
+    "for real...",
+    "explain..."
   ],
   "starters" : [
     "So... what did you do during this sprint?",
-    "Did you have a particular focus this sprint, and what was it?",
+    "Did you have a particular focus this sprint, and tell me a bit about it?",
     "What did you work on?",
     "What were your focus areas this sprint?"
   ],
   "followups" : [
     "How did you do this sprint?",
-    "What helps you to be successful as a team?",
+    "What helps you to be successful in the team?",
     "Where and when did it go wrong in this sprint?",
     "Which tools or techniques proved to be useful? Which not?",
     "What was your biggest impediment?",
@@ -153,13 +169,31 @@
     "What made you smile?",
     "How do you feel this sprint contributed to our roadmap?",
     "If you could do something over, what would you pick?",
-    "Was there a real team-success?"
+    "What was a real team-success?",
+    "Name three things that went well"
+
   ],
   "closers" : [
-    "All done!",
+    "All done! Thanks!",
     "That was a tough one, thanks!",
-    "Something to think about...",
-    "I think... nvm, it slipped my mind. I guess we're done...",
-    "Complete, thanks! Feel free to discuss more with the team"
+    "Something to think about... Thanks for sharing!",
+    "I think... nvm, it slipped my mind. I guess we're done... Thanks!",
+    "Complete, thanks! Feel free to discuss more with the team!"
+  ],
+  "rating-low" : [
+    "This is really something to discuss with the team"
+  ],
+  "rating-medium" : [
+    "Let's have a better look at the improvements to be made"
+  ],
+  "rating-high" : [
+    "Nice job!",
+    "There's always room for improvement isn't there?",
+    "Nice score! Just a bit more finetuning...",
+    "Not bad, not bad!",
+    "Good job, but don't be shy to be more critical!"
+  ],
+  "rating-perfect" : [
+    "Perfect score! Amazing!"
   ]
 }
