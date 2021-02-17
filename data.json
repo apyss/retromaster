@@ -1,0 +1,165 @@
+{
+  "mirrors": [
+    {
+      "example" : "I think it was a great sprint!",
+      "pattern" : "^.*?(think|thought|guess) (?!(I|we) )([^.!]*)",
+      "group" : 3,
+      "responses" : [
+        "Mmhmm, so you really think {}?",
+        "No doubts... {}?",
+        "Even if {}, any other thoughts on it?",
+        "Do you just think that?"
+      ]
+    },
+    {
+      "example" : "I think I did a great job!",
+      "pattern" : "^.*?(think|thought|guess) (I|we) ([^.!]*)",
+      "group" : 3,
+      "responses" : [
+        "Are you sure you or we {}?",
+        "You or we '{}'? Can you explain?",
+        "If you or we {}, how would that be better?"
+      ]
+    },
+    {
+      "example" : "I feel it was nice!",
+      "pattern" : "^.*?(feel|felt) ([^.!]*)",
+      "group" : 2,
+      "responses" : [
+        "Thanks for sharing how you felt about that. So why do you feel {}?",
+        "Do you think that was felt by others as well?"
+      ]
+    },
+    {
+      "example" : "It was ok, but that bug was driving me crazy!",
+      "pattern" : "^.* but (.*?) (was|is|could|should|would|were|are|has|have|has been|could have|could've|should have|should've)",
+      "group" : 1,
+      "responses" : [
+        "Can you tell a bit more about {}?",
+        "How would you deal with {} better the next time?",
+        "Ok, so '{}' is memorable. Care to explain?",
+        "Why do you think {} was important?"
+      ]
+    },
+    {
+      "example" : "It was ok, but that bug was driving me crazy!",
+      "pattern" : "^.*? it .*",
+      "group" : 0,
+      "responses" : [
+        "Tell us more about it!",
+        "When a next time comes, how will you address it then?",
+        "What do you mean?",
+        "Was it important for you or the team?",
+        "Could you improve on this?",
+        "Was it a challenge or really a walk in the park?",
+        "More juicy details!",
+        "What else on this?",
+        "That's not all you can tell about it!"
+      ]
+    },
+    {
+      "example" : "We could've done better maybe on that last story.",
+      "pattern" : "^.*?(maybe|perhaps).*",
+      "group" : 1,
+      "responses" : [
+        "{}?",
+        "I feel a bit of uncertainty there...",
+        "Another approach next time maybe?",
+        "That's a good point you make there. How would you go about that?"
+      ]
+    },
+    {
+      "example" : "I like that we managed to complete that epic",
+      "pattern" : "^.*?(like|love)[d]? (that|how) (I|we) ([^,.!]*).*",
+      "group" : 4,
+      "responses" : [
+        "Compliments, it was a nice feat that you {}! Any other things you liked?",
+        "In three words, how did it feel you {}?",
+        "So what did you learn from this that you can use again later?"
+      ]
+    },
+    {
+      "example" : "It has been a bit all over the place this time...",
+      "pattern" : "^.*? (it's|is|was|has been) ([^.,!]*)",
+      "group" : 2,
+      "responses" : [
+        "How come you say it '{}'?",
+        "So, it '{}'. What more can say about it?",
+        "Is it always '{}'?"
+      ]
+    },
+    {
+      "example" : "It has been a bit all over the place this time...",
+      "pattern" : "((the|it|that|this|these|those) (^.*?)) (is|are|were) ([^.,!]*)",
+      "group" : 1,
+      "responses" : [
+        "Tell us more about {}?",
+        "What would you says was the real challenge with {}?"
+      ]
+    }
+  ],
+  "continues" : [
+    "mmhmm...",
+    "right...",
+    "ok...",
+    "check...",
+    "and...",
+    "I see...",
+    "oh...",
+    "well...",
+    "go on...",
+    "continue...",
+    "don't stop there...",
+    "anything else...",
+    "is that all...",
+    "but...",
+    "or...",
+    "maybe...",
+    "sure...",
+    "possibly...",
+    "hmm...",
+    "pffft...",
+    "wow...",
+    "for real..."
+  ],
+  "starters" : [
+    "So... what did you do during this sprint?",
+    "Did you have a particular focus this sprint, and what was it?",
+    "What did you work on?",
+    "What were your focus areas this sprint?"
+  ],
+  "followups" : [
+    "How did you do this sprint?",
+    "What helps you to be successful as a team?",
+    "Where and when did it go wrong in this sprint?",
+    "Which tools or techniques proved to be useful? Which not?",
+    "What was your biggest impediment?",
+    "What was your greatest enabler?",
+    "If you could change one thing, what would it be?",
+    "What’s keeping you awake at night?",
+    "Which things went smoothly in this sprint?",
+    "Tell me something that was good",
+    "Share something you're not particularly proud of",
+    "What would you like to improve next sprint?",
+    "What are the positive aspects that you’d like to persist?",
+    "Name three words that best describe this sprint?",
+    "What can you improve?",
+    "Name a big fail you had...",
+    "Did you do any T-shaping?",
+    "What was something new you learned?",
+    "Did you have personal goals for this sprint? Which?",
+    "What would be a good team goal for the next sprint?",
+    "Would you approach this the same next time?",
+    "What made you smile?",
+    "How do you feel this sprint contributed to our roadmap?",
+    "If you could do something over, what would you pick?",
+    "Was there a real team-success?"
+  ],
+  "closers" : [
+    "All done!",
+    "That was a tough one, thanks!",
+    "Something to think about...",
+    "I think... nvm, it slipped my mind. I guess we're done...",
+    "Complete, thanks! Feel free to discuss more with the team"
+  ]
+}
