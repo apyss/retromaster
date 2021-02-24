@@ -70,7 +70,7 @@
     },
     {
       "example" : "I like that we managed to complete that epic",
-      "pattern" : "^.*?(like|love)[d]? (that|how) (I|we) ([^,.!]*).*",
+      "pattern" : "^.*?(like|love)[d]? (that|how) (I|we|it|the team) ([^,.!]*).*",
       "group" : 4,
       "responses" : [
         "Compliments, it was a nice feat that you {}! Any other things you liked?",
@@ -80,7 +80,7 @@
     },
     {
       "example" : "It has been a bit all over the place this time...",
-      "pattern" : "^.*?(it ('s|is|was|has been) ([^.,!]*))",
+      "pattern" : "^.*?((it|there) ('s|is|was|has been) ([^.,!]*))",
       "group" : 1,
       "responses" : [
         "How come you say it '{}'?",
@@ -90,11 +90,13 @@
     },
     {
       "example" : "It has been a bit all over the place this time...",
-      "pattern" : "^((the|it|that|this|these|those) (.*?)) (is|was|are|were|has been) ([^.,!]*)",
+      "pattern" : "^((the|it|that|this|these|those) (.{2,15})) (is|was|are|were|has been) ([^.,!]*)",
       "group" : 1,
       "responses" : [
         "Tell us more about {}?",
-        "What would you says was the real challenge with {}?"
+        "So {} ... what else about that?",
+        "Would you approach {} the same the next time round?",
+        "What would you say was the challenge with {}?"
       ]
     },
     {
@@ -105,7 +107,26 @@
         "Let's not talk about me shall we? Let's focus on your story...",
         "I know nothing! Continue please, you were on a roll..."
       ]
-    }
+    },
+    {
+      "example" : "Well, what do you think?",
+      "pattern" : "^.*?(problem|challenge|issue).*",
+      "group" : 1,
+      "responses" : [
+        "Working on an interesting {} is a nice thing though, right?",
+        "So what did you learn from this {}?",
+        "What can we improve for dealing with a similar {} next time?",
+        "Was this {} a team thing, or did you work on it alone?"
+      ]
+    },
+    {
+      "example" : "Well, what do you think?",
+      "pattern" : "^.*?(incident|outage|disturbance).*",
+      "group" : 1,
+      "responses" : [
+        "That sounds serious. What was the impact of that {}, and how did you handle it?"
+      ]
+    },
   ],
   "continues" : [
     "mmhmm...", "mmhmm...", "mmhmm",
