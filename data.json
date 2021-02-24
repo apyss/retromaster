@@ -32,8 +32,8 @@
     },
     {
       "example" : "It was ok, but that bug was driving me crazy!",
-      "pattern" : "^.* but (.*?) (was|is|could|should|would|were|are|has|have|has been|could have|could've|should have|should've)",
-      "group" : 1,
+      "pattern" : "^.*(but|however) (.*?) (was|is|could|should|would|were|are|has|have|has been|could have|could've|should have|should've)",
+      "group" : 2,
       "responses" : [
         "Can you tell a bit more about {}?",
         "How can you improve '{}' even more the next time?",
@@ -43,7 +43,7 @@
     },
     {
       "example" : "It was ok, but that bug was driving me crazy!",
-      "pattern" : "^.*? it .*",
+      "pattern" : "(^|.*? )it .*",
       "group" : 0,
       "responses" : [
         "Tell us more about it!",
@@ -90,7 +90,7 @@
     },
     {
       "example" : "It has been a bit all over the place this time...",
-      "pattern" : "((the|it|that|this|these|those) (^.*?)) (is|are|were) ([^.,!]*)",
+      "pattern" : "^((the|it|that|this|these|those) (.*?)) (is|was|are|were|has been) ([^.,!]*)",
       "group" : 1,
       "responses" : [
         "Tell us more about {}?",
@@ -102,8 +102,8 @@
       "pattern" : "^.*?you.*[?]$",
       "group" : 0,
       "responses" : [
-        "Let's not talk about me shall we? Let's continue with your story...",
-        "Don't ask me, I know nothing! Continue please, you were on a roll..."
+        "Let's not talk about me shall we? Let's focus on your story...",
+        "I know nothing! Continue please, you were on a roll..."
       ]
     }
   ],
@@ -122,25 +122,16 @@
     "anything else...",
     "is that all...",
     "but...",
-    "or...",
     "maybe...",
-    "sure...",
-    "possibly...",
     "hmm...", "hmm...", "hmm...",
-    "pffft...",
-    "wow...",
-    "ah...",
-    "so...",
-    "mmk...", "mmk...", "mmk...",
     "yes, and...",
     "please continue...",
     "come to think about it...",
-    "for real...",
-    "explain..."
+    "can you explain..."
   ],
   "starters" : [
     "So... what did you do during this sprint?",
-    "Did you have a particular focus this sprint, and tell me a bit about it?",
+    "Did you have a particular focus this sprint, and can you tell me a bit about it?",
     "What did you work on?",
     "What were your focus areas this sprint?"
   ],
