@@ -5,7 +5,7 @@ import time
 
 # Output text to the user
 def say(text):
-    print("\033[32m :: " + text + "\033[0m");
+    print(" :: " + text);
     time.sleep(random.randint(1, 10) / 10)
 
 # Ask input from the user
