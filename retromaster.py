@@ -74,7 +74,7 @@ for question in getFollowUpQuestions():
     for x in range(1, random.randint(2,3)):
         answer = ask(createMirrorResponse(answer))
 
-
+answer = ask("Is there anyone you would like to give compliments?")
 answer = ask("To close things off... On a scale of 1 through 5, how would you rate this sprint?")
 say(getRatingResponse(answer))
 say(getCloser())
